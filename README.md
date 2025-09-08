@@ -11,27 +11,30 @@
 ## <b>About this Specialization<b>
 
 Welcome! This repository contains the projects and exercises I completed during the **_TensorFlow: Advanced Techniques Specialization_** by **_DeepLearning.AI_** on Coursera.
-This advanced program strengthened my expertise in **_TensorFlow 2.x_** and **_Keras_**, providing me with the skills to design and optimize sophisticated deep learning models. Through hands-on projects, I explored:
+This advanced program strengthened my expertise in **_TensorFlow 2.x_** and **_Keras_**, providing me with the skills to design, build, and optimize sophisticated deep learning models. Through hands-on projects, I explored:
 
-1. Advanced Model Architectures:
-    * Built non-sequential models with the Functional API, including custom layers and multi-input/output complex workflows.
-    * Fine-tuned and extracted features from pre-trained models like _VGG16/19_, _ResNet50_ and _InceptionV3_.
-    * Implemented segmentation architectures such as _FCN-8_, _U-Net_, and _Mask R-CNN_ (via _Object Detection API_).
-    * Fine-tuned _RetinaNet_ for object detection, leveraging Feature Pyramid Networks (FPN) and Focal Loss, by restoring pretrained weights and retraining the classification layers on a custom dataset.
-    *	Applied transfer learning with _MobileNetV2_ for image classification tasks using TensorFlow.
+1. Advanced Model Architectures & Customization:
+    * Built non-sequential models using the Functional API, implementing custom layers, loss functions, and multi-input/output workflows.
+    * Extracted features and performed fine-tuning on pre-trained models like _VGG16/19_, _ResNet50_ and _InceptionV3_ for custom tasks.
+    * Built _FCN-8_ and _U-Net_ from scratch, and fine-tuned _RetinaNet_ & _Faster R-CNN_ using the _TensorFlow Object Detection API_.
+    * Applied transfer learning with _MobileNetV2_ for image classification tasks using TensorFlow.
 
 2. Distributed Training Strategies:
-    *	Used strategies like ```tf.distribute.MirroredStrategy``` for multi-GPU/TPU training and optimized models for edge devices.
+    *	```tf.distribute.MirroredStrategy``` for synchronous training on multiple _GPUs_ on a single machine, efficiently replicating the model and synchronizing gradients.
+    *	```tf.distribute.experimental.TPUStrategy```  to accelerate and scale model training on _TPUs_ for maximum performance.
+    *	```tf.distribute.OneDeviceStrategy``` for debugging and baseline performance on a single device (_CPU/GPU_).
 
-3. Advanced Computer Vision:
-    *	Implemented object detection (_RetinaNet_, _Faster R-CNN_), image segmentation (_FCNs_, _U-Net_, _Mask R-CNN_), and explored interpretability with _Grad-CAM_.
-    * Evaluated segmentation quality using standard metrics like _IoU (Intersection over Union)_ and _Dice Coefficient_ to assess mask accuracy beyond pixel-wise error.
+3. Advanced Computer Vision & Evaluation:
+    *	Gained practical experience in key CV tasks: object detection, image segmentation (semantic and instance), and model interpretability using _Grad-CAM_.
+    * Moved beyond basic accuracy; evaluated segmentation performance using standard metrics like Intersection over Union (_IoU_) and _Dice Coefficient_.
 
 4. Generative Deep Learning:
-    * Developed VAEs for latent space manipulation, _GANs_ (_DCGAN_, _CycleGAN_) for image generation, and neural style transfer applications.
+    * Developed and trained Variational Autoencoders (_VAEs_) for image generation and latent space exploration.
+    * Built and tuned Generative Adversarial Networks (_GANs_), including _DCGAN_ for simple generation and _CycleGAN_ for unpaired image-to-image translation.
+    * Implemented Neural Style Transfer to combine the content and style of different images.
 
-5. Optimization & Scalability: 
-    * Applied custom training loops, used gradient tape, and designed scalable hybrid models.
+5. Low-Level Control & Optimization: 
+    * Implemented custom training loops using ```tf.GradientTape``` for maximum flexibility over the training process.
 
 Completing this specialization empowered me to tackle real-world challenges—from building exotic model topologies to deploying scalable AI solutions. The projects here reflect my journey through advanced TensorFlow capabilities, blending theory with practical implementation.
 
